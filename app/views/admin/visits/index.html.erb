@@ -1,0 +1,21 @@
+<h1>Visitor stats</h1>
+
+<h2>Latest visitors</h2>
+<table class="centerText">
+	<tr>
+		<th>Time</th>
+		<th>Style</th>
+		<th>Clicks</th>
+		<th>Conversions</th>
+		<th>Referring URL</th>
+	</tr>
+	<% @visits.each do |visit| %>
+		<tr>
+			<td><%= visit.created_at.strftime('%m/%d/%y %H:%M')%></td>
+			<td><%= visit.style.name %></td>
+			<td><%= visit.clicks.count %></td>
+			<td><%= visit.clicks.where(:converted => true).count %></td>
+			<td><%= visit.referrer_url %></td>
+		</tr>
+	<% end %>
+</table>

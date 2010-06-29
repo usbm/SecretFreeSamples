@@ -5,6 +5,7 @@ Secretfreesamples::Application.routes.draw do |map|
       resources :style_files
     end
     resources :offers
+    resources :visits
   end
   
   resources :offers

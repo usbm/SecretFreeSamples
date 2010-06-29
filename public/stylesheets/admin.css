@@ -89,7 +89,7 @@ div.field, div.actions {
 }
 
 #nav ul {
-	margin: 15px auto; width: 300px; list-style-type: none; padding: 0;
+	margin: 15px auto; width: 450px; list-style-type: none; padding: 0;
 }
 
 #nav ul li {
@@ -97,10 +97,10 @@ div.field, div.actions {
 }
 
 #nav ul li a {
-	display: block; background-color: #333; color: #999; width: 149px; margin: 0 1px 0 0; line-height: 30px;
+	display: block; background-color: #ccc; color: #555; width: 149px; margin: 0 1px 0 0; line-height: 30px;
 	text-decoration: none; text-align: center; font-weight: bold;
 }
 
 #nav ul li a:hover, #nav ul li.selected a {
-	background-color: #ccc; color: #555;
+	background-color: #333; color: #fff;
 }

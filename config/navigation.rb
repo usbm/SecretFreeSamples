@@ -31,6 +31,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #
     primary.item :offers, 'Offers', admin_offers_path
     primary.item :styles, 'Styles', admin_styles_path
+    primary.item :visits, 'Visits', admin_visits_path
     
     # Add an item which has a sub navigation (same params, but with block)
     #primary.item :key_2, 'name', url, options do |sub_nav|
