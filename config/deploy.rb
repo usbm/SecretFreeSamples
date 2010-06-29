@@ -3,8 +3,10 @@ set :repository,  "git@github.com:usbm/SecretFreeSamples.git"
 
 set :deploy_to, '/home/rails/public_html/secretfreesamples'
 
+set :user, 'rails'
 set :scm, :git
 set :deploy_via, :remote_cache
+set :use_sudo, false
 
 role :web, "secretfreesamples.bsgbeta.com"                          # Your HTTP server, Apache/etc
 role :app, "secretfreesamples.bsgbeta.com"                          # This may be the same as your `Web` server
