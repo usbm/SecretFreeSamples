@@ -10,6 +10,10 @@ gem 'inherited_resources'
 gem 'paperclip'
 gem 'simple-navigation'
 
+group :production do
+	gem 'mysql'
+end
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
