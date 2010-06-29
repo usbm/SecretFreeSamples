@@ -12,7 +12,7 @@
 	<% @visits.each do |visit| %>
 		<tr>
 			<td><%= visit.created_at.strftime('%m/%d/%y %H:%M')%></td>
-			<td><%= visit.style.name %></td>
+			<td><%= visit.style ? visit.style.name : "None" %></td>
 			<td><%= visit.clicks.count %></td>
 			<td><%= visit.clicks.where(:converted => true).count %></td>
 			<td><%= visit.referrer_url %></td>
