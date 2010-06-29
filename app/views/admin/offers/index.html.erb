@@ -1,11 +1,12 @@
 <h1>Listing offers</h1>
 
-<table>
+<table class="centerText">
   <tr>
     <th>Name</th>
-    <th>Payout</th>
-    <th>Network</th>
+    <th>Status</th>
+    <th>Banner</th>
     <th>Url</th>
+		<th>Payout</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,12 +15,13 @@
 <% @offers.each do |offer| %>
   <tr>
     <td><%= offer.name %></td>
-    <td><%= offer.payout %></td>
-    <td><%= offer.network_id %></td>
-    <td><%= offer.url %></td>
-    <td><%= link_to 'Show', [:admin,@offer] %></td>
+		<td><%= offer.active ? "Active" : "Inactive" %></td>
+    <td><%= image_tag offer.banner.url, :style => 'max-width: 100px;' %></td>
+    <td><%= link_to "Preview", offer.url %></td>
+		<td><%= number_to_currency offer.payout %></td>
+    <td><%= link_to 'View info', [:admin,offer] %></td>
     <td><%= link_to 'Edit', edit_admin_offer_path(offer) %></td>
-    <td><%= link_to 'Destroy', [:admin,@offer], :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Delete', [:admin,offer], :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

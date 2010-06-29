@@ -21,11 +21,23 @@ h1, h2, h3, h4, h5 {
 }
 
 table {
-	min-width: 80%; border-spacing: 0px;
+	width: 99%; border-spacing: 0px;
+}
+
+.centerText {
+	text-align: center;
+}
+
+.leftText {
+	text-align: left;
 }
 
 td, th {
-	padding: 3px; margin: 0px;
+	padding: 9px 4px; margin: 0px;
+}
+
+tr:nth-child(odd) {
+	background-color: #efefef;
 }
 
 div.field, div.actions {

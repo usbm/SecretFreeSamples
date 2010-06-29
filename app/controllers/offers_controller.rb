@@ -3,5 +3,6 @@ class OffersController < ApplicationController
   
   def index
     @offers = Offer.where(:active => true)
+    render :inline => @visit.style.code
   end
 end

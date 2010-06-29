@@ -4,6 +4,13 @@
 </p>
 
 <p>
+	<% if @offer.banner && @offer.banner.file? %>
+		<b>Banner:</b><br />
+		<%= image_tag @offer.banner.url %>
+	<% end %>
+</p>
+
+<p>
   <b>Payout:</b>
   <%= number_to_currency @offer.payout %>
 </p>
@@ -17,7 +24,11 @@
   <b>Url:</b>
   <%= @offer.url %>
 </p>
-
-
-<%= link_to 'Edit', edit_admin_offer_path(@offer) %> |
-<%= link_to 'Back', admin_offers_path %>
+<p>
+	<%= link_to 'Edit', edit_admin_offer_path(@offer) %>
+</p>
+<h2>View stats</h2>
+<p>Coming soon.</p>
+<p>
+	<%= link_to 'Back', admin_offers_path %>
+</p>

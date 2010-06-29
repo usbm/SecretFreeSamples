@@ -1,5 +1,6 @@
 Secretfreesamples::Application.routes.draw do |map|
   namespace :admin do
+    match 'clear' => 'dashboard#clear_session'
     resources :styles do
       resources :style_files
     end

@@ -1,5 +1,8 @@
 class Admin::StylesController < ApplicationController
+  before_filter :require_admin
+  
   inherit_resources
+  
   layout 'admin'
   
   def create

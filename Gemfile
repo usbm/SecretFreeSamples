@@ -10,6 +10,10 @@ gem 'inherited_resources'
 gem 'paperclip'
 gem 'simple-navigation'
 
+group :development do
+	gem 'capistrano'
+end
+
 group :production do
 	gem 'mysql'
 end
@@ -17,8 +21,6 @@ end
 # Use unicorn as the web server
 # gem 'unicorn'
 
-# Deploy with Capistrano
-# gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug'
