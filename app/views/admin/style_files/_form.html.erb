@@ -1,0 +1,21 @@
+<%= form_for([:admin,@style,@style_file], :html => { :multipart => true }) do |f| %>
+  <% if @style_file.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@style_file.errors.count, "error") %> prohibited this style_file from being saved:</h2>
+
+      <ul>
+      <% @style_file.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :attachment %><br />
+    <%= f.file_field :attachment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,25 @@
+<h1>Listing styles</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Active?</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @styles.each do |style| %>
+  <tr>
+    <td><%= style.name %></td>
+    <td><%= style.active ? "Yes" : "No" %></td>
+    <td><%= link_to 'Manage files', admin_style_style_files_path(style) %></td>
+    <td><%= link_to 'Edit code', edit_admin_style_path(style) %></td>
+    <td><%= link_to 'Delete', [:admin,style], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Style', new_admin_style_path %>

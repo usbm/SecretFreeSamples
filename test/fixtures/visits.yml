@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  style_id: 1
+  referrer_url: MyString
+  referrer_keywords: MyString
+  referrer_page: 1
+  browser: MyString
+  ip_address: MyString
+
+two:
+  style_id: 1
+  referrer_url: MyString
+  referrer_keywords: MyString
+  referrer_page: 1
+  browser: MyString
+  ip_address: MyString

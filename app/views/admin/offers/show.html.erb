@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%= @offer.name %>
+</p>
+
+<p>
+  <b>Payout:</b>
+  <%= number_to_currency @offer.payout %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @offer.active ? "Yes" : "No" %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @offer.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_offer_path(@offer) %> |
+<%= link_to 'Back', admin_offers_path %>

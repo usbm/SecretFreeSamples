@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  payout: 9.99
+  network_id: 1
+  url: MyString
+
+two:
+  name: MyString
+  payout: 9.99
+  network_id: 1
+  url: MyString

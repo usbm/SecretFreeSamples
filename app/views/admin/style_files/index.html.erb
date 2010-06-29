@@ -1,0 +1,27 @@
+<h1>Manage files for &lsquo;<%= @style.name %>&rsquo; style</h1>
+
+<table>
+  <tr>
+    <th>Image</th>
+    <th>Path</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @style_files.each do |style_file| %>
+  <tr>
+		<td><%= image_tag style_file.attachment.url(nil,false), :style => 'max-height: 100px; max-width: 200px;' %>
+    <td><%= style_file.attachment.url(nil,false) %></td>
+    <td><%= link_to 'View', style_file.attachment.url(nil,false) %></td>
+    <td><%= link_to 'Delete', [:admin,@style,style_file], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Style file', new_admin_style_style_file_path(@style) %>
+
+<p>
+	<%= link_to 'Back to styles', admin_styles_path %>
+</p>
