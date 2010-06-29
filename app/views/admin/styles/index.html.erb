@@ -1,9 +1,11 @@
 <h1>Listing styles</h1>
 
-<table>
+<table class="centerText">
   <tr>
     <th>Name</th>
     <th>Active?</th>
+		<th>Clicks</th>
+		<th>Conversions</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,6 +15,8 @@
   <tr>
     <td><%= style.name %></td>
     <td><%= style.active ? "Yes" : "No" %></td>
+		<td><%= style.clicks.count %></td>
+		<td><%= style.clicks.converted.count %></td>
     <td><%= link_to 'Manage files', admin_style_style_files_path(style) %></td>
     <td><%= link_to 'Edit code', edit_admin_style_path(style) %></td>
     <td><%= link_to 'Delete', [:admin,style], :confirm => 'Are you sure?', :method => :delete %></td>

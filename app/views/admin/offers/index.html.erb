@@ -6,6 +6,8 @@
     <th>Status</th>
     <th>Banner</th>
     <th>Url</th>
+		<th>Clicks</th>
+		<th>Converted</th>
 		<th>Payout</th>
     <th></th>
     <th></th>
@@ -18,6 +20,8 @@
 		<td><%= offer.active ? "Active" : "Inactive" %></td>
     <td><%= image_tag offer.banner.url, :style => 'max-width: 100px;' %></td>
     <td><%= link_to "Preview", offer.url %></td>
+		<td><%= offer.clicks.count %></td>
+		<td><%= offer.clicks.converted.count %></td>
 		<td><%= number_to_currency offer.payout %></td>
     <td><%= link_to 'View info', [:admin,offer] %></td>
     <td><%= link_to 'Edit', edit_admin_offer_path(offer) %></td>
