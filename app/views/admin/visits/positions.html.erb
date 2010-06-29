@@ -1,0 +1,7 @@
+<% (1..15).each do |i| %>
+	<div style="float: left; width: 30%; margin-right: 10px; height: 150px; line-height: 150px; font-size: 30px; text-align: center;">
+		<%= Click.where(:position => i).count %> / <%= Click.where(:position => i).converted.count %>
+	</div>
+<% end %>
+
+<br style="clear: both;" />

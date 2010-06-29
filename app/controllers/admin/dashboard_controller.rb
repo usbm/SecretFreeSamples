@@ -11,4 +11,7 @@ class Admin::DashboardController < ApplicationController
     session[:visit_id] = nil
     redirect_to('/')
   end
+  
+  def positions
+  end
 end

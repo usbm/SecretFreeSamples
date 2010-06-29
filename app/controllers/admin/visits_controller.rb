@@ -5,6 +5,10 @@ class Admin::VisitsController < ApplicationController
   
   layout 'admin'
   
+  def positions
+    
+  end
+  
   protected
   
   def collection

@@ -1,5 +1,7 @@
 <ul id="offers">
+	<% position = 1 %>
 	<% @offers.each do |offer| %>
-		<li><%= link_to image_tag(offer.banner.url, :alt => offer.name), offer %></li>
+		<li><%= link_to image_tag(offer.banner.url, :alt => offer.name), offer_path(offer, :p => position) %></li>
+		<% position += 1 %>
 	<% end %>
 </ul>

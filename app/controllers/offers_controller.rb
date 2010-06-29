@@ -8,7 +8,7 @@ class OffersController < ApplicationController
   
   def show
     @offer = Offer.find(params[:id])
-    click = Click.create(:visit => @visit, :offer => @offer)
+    click = Click.create(:visit => @visit, :offer => @offer, :position => params[:p])
     redirect_to @offer.url# + "&subid=#{click.id}"
   end
 end

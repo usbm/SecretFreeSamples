@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100629064253) do
+ActiveRecord::Schema.define(:version => 20100629201601) do
 
   create_table "clicks", :force => true do |t|
     t.integer  "visit_id"
@@ -17,10 +17,12 @@ ActiveRecord::Schema.define(:version => 20100629064253) do
     t.boolean  "converted",  :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "position"
   end
 
   add_index "clicks", ["converted"], :name => "index_clicks_on_converted"
   add_index "clicks", ["offer_id"], :name => "index_clicks_on_offer_id"
+  add_index "clicks", ["position"], :name => "index_clicks_on_position"
   add_index "clicks", ["visit_id"], :name => "index_clicks_on_visit_id"
 
   create_table "offers", :force => true do |t|
